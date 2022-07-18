@@ -19,13 +19,12 @@ const Card = () => {
 
   return (
     <div className="my-2">
-      <div className="col-sm-12 col">
-        <div className="d-flex justify-content-between flex-wrap mb-3">
+      <div className="col">
+        <div className="d-flex justify-content-around flex-wrap mb-3">
           {
             products.Products.map(item => {
-              console.log(item)
               return (
-                <div className="p-0 my-2" key={item.id}>
+                <div className="p-1 my-2" key={item.id}>
                   <div className="card mx-auto" style={{ width: "148px" }}>
                     <img src={item.gambar} className="card-img-top " alt={item.nama} />
                     <div className="card-body p-1">
@@ -33,7 +32,7 @@ const Card = () => {
                       <p className="m-0 font-weight-bold">Rp. {item.harga}</p>
                       {/* detail untuk rekomendasi/review belum ada */}
                       <button type="button" className="btn btn-info btn-sm m-1">Detail</button>
-                      <button type="button" className="btn btn-info btn-sm m-1" onClick={()=>handleAddCart(item)}><FaShoppingCart />+</button>
+                      <button className="btn btn-info btn-sm m-1" onClick={()=>handleAddCart(item)}><FaShoppingCart />+</button>
                     </div>
                   </div>
                 </div>

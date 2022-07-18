@@ -1,9 +1,24 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { cartsDeleteActions, cartsMinusActions, cartsPlusActions } from '../../redux/actions/cartActions'
 
 const Cart = () => {
   const items = useSelector(state => state.CartReducers)
+  const dispatch = useDispatch()
   // console.log(items);
+
+  const handlePlusCart=(item)=>{
+    // console.log(item)
+    dispatch(cartsPlusActions(item))
+  }
+  const handleMinusCart=(item)=>{
+    dispatch(cartsMinusActions(item))
+  }
+
+  const handleDeleteCart=(item)=>{
+    // console.log("del", item)
+    dispatch(cartsDeleteActions(item))
+  }
 
   return (
     <div className="container mt-2">
@@ -15,13 +30,12 @@ const Cart = () => {
           :
           <div className="row justify-content-around">
             <div className="col-sm-6 col-lg-6 p-0 mb-5">
-              <div className="card">
+              <div className="">
                 {
                   // console.log(items.carts)
                   items.carts.map((product) => {
-                    console.log(product)
+                    // console.log(product)
                     return (
-                      <>
                         <div className="col" key={product.id}>
                           <div className="m-1 font-weight-bold">{product.nama}</div>
                           <div className="row justify-content-between mx-1">
@@ -32,21 +46,19 @@ const Cart = () => {
                               <div>
                                 <p className="text-left m-0">Rp.{product.harga}</p>
                                 <p className="text-left m-0">Subtotal:</p>
-                                <p className="text-left m-0 font-weight-bold">Rp.{product.harga}</p>
+                                <p className="text-left m-0 font-weight-bold">Rp.{product.countPrice}</p>
                               </div>
                               <div className="btn-group btn-group-sm my-2" role="group" aria-label="Basic example">
-                                <button type="button" className="btn btn-primary ">-</button>
-                                <input type="number" className="form-control mx-1 p-0 text-center" value={product.countItem} />
-                                <button type="button" className="btn btn-primary ">+</button>
+                                <button type="button" className="btn btn-primary"onClick={()=>handleMinusCart(product)}>-</button>
+                                {/* <p className="px-2">{product.countItem}</p> */}
+                                {/* <input type="number" className="form-control mx-1 p-0 text-center" value={product.countItem} /> */}
+                                <button type="button" className="btn btn-primary" onClick={()=>handlePlusCart(product)}>+</button>
                               </div>
-                              
                             </div>
                           </div>
-                          <button type="button" className="btn btn-danger btn-sm m-2">Delete Item</button>
-                          <button type="button" className="btn btn-primary btn-sm m-2">Update Jumlah</button>
-                          <hr />
+                          <button type="button" className="btn btn-danger btn-sm m-2" onClick={()=>handleDeleteCart(product)}>Delete Item</button>
+                          <hr/>
                         </div>
-                      </>
                     )
                   })
                 }
@@ -57,13 +69,13 @@ const Cart = () => {
               <hr />
               <div className="row justify-content-lg-between">
                 <div className="col text-left">sub total</div>
-                <div className="col text-right">Rp. 300000</div>
+                <div className="col text-right">Rp. {items.cartsPrice}</div>
               </div>
               <hr />
-              <div className="row justify-content-lg-between font-weight-bold">
+              {/* <div className="row justify-content-lg-between font-weight-bold">
                 <div className="col text-left">total</div>
                 <div className="col text-right">Rp. 300000</div>
-              </div>
+              </div> */}
               <button type="button" className="btn btn-outline-success btn-sm my-3">Check Out</button>
             </div>
           </div>
