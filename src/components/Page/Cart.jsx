@@ -2,23 +2,26 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartsDeleteActions, cartsMinusActions, cartsPlusActions } from '../../redux/actions/cartActions'
 
-const Cart = () => {
+function Cart(){
   const items = useSelector(state => state.CartReducers)
   const dispatch = useDispatch()
   // console.log(items);
 
-  const handlePlusCart=(item)=>{
+  const handlePlusCart = (item) => {
     // console.log(item)
     dispatch(cartsPlusActions(item))
   }
-  const handleMinusCart=(item)=>{
+  const handleMinusCart = (item) => {
     dispatch(cartsMinusActions(item))
   }
 
-  const handleDeleteCart=(item)=>{
+  const handleDeleteCart = (item) => {
     // console.log("del", item)
     dispatch(cartsDeleteActions(item))
   }
+  // const handleQuantityCart = () => {
+  //   console.log("change quantity")
+  // }
 
   return (
     <div className="container mt-2">
@@ -36,29 +39,33 @@ const Cart = () => {
                   items.carts.map((product) => {
                     // console.log(product)
                     return (
-                        <div className="col" key={product.id}>
-                          <div className="m-1 font-weight-bold">{product.nama}</div>
-                          <div className="row justify-content-between mx-1">
-                            <div className="col p-0">
-                              <img src={product.gambar} className="card-img-top " alt={product.kategori} />
+                      <div className="col" key={product.id}>
+                        <div className="m-1 font-weight-bold">{product.nama}</div>
+                        <div className="row justify-content-between mx-1">
+                          <div className="col p-0">
+                            <img src={product.gambar} className="card-img-top " alt={product.kategori} />
+                          </div>
+                          <div className="col-6 align-content-between pl-2">
+                            <div>
+                              <p className="text-left m-0">Rp.{product.harga}</p>
+                              <div className="input-group input-group-sm">
+                                <div className="input-group-prepend">
+                                  <span className="input-group-text" id="inputGroup-sizing-sm">Jumlah :</span>
+                                </div>
+                                <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readOnly value={product.countItem}/>
+                              </div>
+                              <p className="text-left m-0">Subtotal:</p>
+                              <p className="m-0 font-weight-bold">Rp.{product.countPrice}</p>
                             </div>
-                            <div className="col-6 align-content-between pl-2">
-                              <div>
-                                <p className="text-left m-0">Rp.{product.harga}</p>
-                                <p className="text-left m-0">Subtotal:</p>
-                                <p className="text-left m-0 font-weight-bold">Rp.{product.countPrice}</p>
-                              </div>
-                              <div className="btn-group btn-group-sm my-2" role="group" aria-label="Basic example">
-                                <button type="button" className="btn btn-primary"onClick={()=>handleMinusCart(product)}>-</button>
-                                {/* <p className="px-2">{product.countItem}</p> */}
-                                {/* <input type="number" className="form-control mx-1 p-0 text-center" value={product.countItem} /> */}
-                                <button type="button" className="btn btn-primary" onClick={()=>handlePlusCart(product)}>+</button>
-                              </div>
+                            <div className="btn-group btn-group-sm my-2" role="group" aria-label="Basic example">
+                              <button type="button" className="btn btn-primary" onClick={() => handleMinusCart(product)}>-</button>
+                              <button type="button" className="btn btn-primary" onClick={() => handlePlusCart(product)}>+</button>
                             </div>
                           </div>
-                          <button type="button" className="btn btn-danger btn-sm m-2" onClick={()=>handleDeleteCart(product)}>Delete Item</button>
-                          <hr/>
                         </div>
+                        <button type="button" className="btn btn-danger btn-sm m-2" onClick={() => handleDeleteCart(product)}>Delete Item</button>
+                        <hr />
+                      </div>
                     )
                   })
                 }

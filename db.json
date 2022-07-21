@@ -2,8 +2,8 @@
   "Products": [
     {
       "id": 1,
-      "nama": "Hijab",
-      "kategori": "Hijab",
+      "nama": "Hijab ",
+      "kategori": "Hijab Phasmia",
       "warna": "Coklat",
       "stok": "5",
       "harga": "59000",
@@ -16,10 +16,10 @@
     {
       "id": 2,
       "nama": "Hijab",
-      "kategori": "Hijab",
-      "warna": "Coklat",
-      "stok": "6",
-      "harga": "90000",
+      "kategori": "Hijab Phasmia",
+      "warna": "Crem",
+      "stok": "10",
+      "harga": "50000",
       "gambar": "https://iili.io/hMTSpV.md.jpg",
       "rating":{
         "rate":3.6,
@@ -29,10 +29,10 @@
     {
       "id": 3,
       "nama": "Hijab",
-      "kategori": "Hijab",
-      "warna": "Coklat",
-      "stok": "6",
-      "harga": "90000",
+      "kategori": "Hijab Phasmia",
+      "warna": "Hitam",
+      "stok": "7",
+      "harga": "55000",
       "gambar": "https://iili.io/hMT8kQ.md.jpg",
       "rating"  :{
         "rate":4.1,
@@ -41,11 +41,11 @@
     },
     {
       "id": 4,
-      "nama": "Hijab",
-      "kategori": "Hijab",
-      "warna": "Coklat",
-      "stok": "6",
-      "harga": "90000",
+      "nama": "Hijab Square",
+      "kategori": "Hijab Phasmia",
+      "warna": "Biru Navi",
+      "stok": "15",
+      "harga": "60000",
       "gambar": "https://iili.io/hMTvYx.jpg",
       "rating"  :{
         "rate":3.7,
@@ -56,10 +56,10 @@
     {
       "id": 5,
       "nama": "Hijab",
-      "kategori": "Hijab",
-      "warna": "Coklat",
-      "stok": "6",
-      "harga": "90000",
+      "kategori": "Hijab Phasmia",
+      "warna": "Kuning",
+      "stok": "10",
+      "harga": "62000",
       "gambar": "https://iili.io/hMTvYx.jpg",
       "rating"  :{
         "rate":2.9,
@@ -70,9 +70,9 @@
       "id": 6,
       "nama": "Hijab",
       "kategori": "Hijab",
-      "warna": "Coklat",
-      "stok": "6",
-      "harga": "90000",
+      "warna": "Abu-Abu",
+      "stok": "36",
+      "harga": "65000",
       "gambar": "https://iili.io/hMTrhP.jpg",
       "rating"  :{
         "rate":4.9,
@@ -82,10 +82,10 @@
     {
       "id": 7,
       "nama": "Hijab",
-      "kategori": "Hijab",
+      "kategori": "Hijab Langsung",
       "warna": "Coklat",
-      "stok": "6",
-      "harga": "90000",
+      "stok": "15",
+      "harga": "70000",
       "gambar": "https://iili.io/hMT4Q1.jpg",
       "rating"  :{
         "rate":2.4,
@@ -95,10 +95,10 @@
     {
       "id": 8,
       "nama": "Hijab",
-      "kategori": "Hijab",
-      "warna": "Coklat",
-      "stok": "6",
-      "harga": "90000",
+      "kategori": "Hijab Langsung",
+      "warna": "Biru",
+      "stok": "36",
+      "harga": "75000",
       "gambar": "https://iili.io/hMTiEg.md.jpg",
       "rating"  :{
         "rate":1.9,
@@ -109,9 +109,9 @@
       "id": 9,
       "nama": "Hijab",
       "kategori": "Hijab",
-      "warna": "Coklat",
-      "stok": "6",
-      "harga": "90000",
+      "warna": "Merah",
+      "stok": "13",
+      "harga": "80000",
       "gambar": "https://iili.io/hMTs4a.md.jpg",
       "rating"  :{
         "rate":3.9,
@@ -121,10 +121,10 @@
     {
       "id": 10,
       "nama": "Hijab",
-      "kategori": "Hijab",
-      "warna": "Coklat",
+      "kategori": "Hijab Square",
+      "warna": "Kuning",
       "stok": "6",
-      "harga": "90000",
+      "harga": "84000",
       "gambar": "https://iili.io/hMTQ3J.md.jpg",
       "rating"  :{
         "rate":4,
@@ -137,7 +137,7 @@
       "kategori": "Hijab",
       "warna": "Coklat",
       "stok": "6",
-      "harga": "90000",
+      "harga": "86000",
       "gambar": "https://iili.io/hMTZYv.md.jpg",
       "rating"  :{
         "rate":5.9,
@@ -150,7 +150,7 @@
       "kategori": "Hijab",
       "warna": "Coklat",
       "stok": "6",
-      "harga": "90000",
+      "harga": "55000",
       "gambar": "https://iili.io/hMTtvR.md.jpg",
       "rating"  :{
         "rate":3.7,
@@ -176,7 +176,7 @@
       "kategori": "Hijab",
       "warna": "Crem",
       "stok": "6",
-      "harga": "90000",
+      "harga": "75000",
       "gambar": "https://iili.io/hMTmTN.jpg",
       "rating"  :{
         "rate":4,
@@ -189,7 +189,7 @@
       "kategori": "Hijab",
       "warna": "Coklat",
       "stok": "6",
-      "harga": "90000",
+      "harga": "85000",
       "gambar": "https://iili.io/hMu33G.md.jpg",
       "rating"  :{
         "rate":2.4,
@@ -202,7 +202,7 @@
       "kategori": "Hijab",
       "warna": "Coklat",
       "stok": "6",
-      "harga": "90000",
+      "harga": "60000",
       "gambar": "https://iili.io/hMuJGn.md.jpg",
       "rating"  :{
         "rate":3,
@@ -215,7 +215,7 @@
       "kategori": "Hijab",
       "warna": "Coklat",
       "stok": "6",
-      "harga": "90000",
+      "harga": "80000",
       "gambar": "https://iili.io/hMuHCX.md.jpg",
       "rating"  :{
         "rate":2.9,
@@ -228,7 +228,7 @@
       "kategori": "Hijab",
       "warna": "Coklat",
       "stok": "6",
-      "harga": "90000",
+      "harga": "75000",
       "gambar": "https://iili.io/hMTpjI.md.jpg",
       "rating"  :{
         "rate":4.5,

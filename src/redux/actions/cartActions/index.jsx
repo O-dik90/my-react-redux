@@ -20,7 +20,6 @@ export function cartsActions(payload) {
         }
         let Total = 0
         for (let i of newList) {
-            // console.log(i.countPrice)
             Total += i.countPrice
         }
         dispatch({
@@ -44,7 +43,6 @@ export function cartsPlusActions(payload) {
         });
         let Total = 0
         for (let i of newList) {
-            // console.log(i.countPrice)
             Total += i.countPrice
         }
         dispatch({
@@ -69,7 +67,6 @@ export function cartsMinusActions(payload) {
             });
             let Total = 0
             for (let i of newList) {
-                // console.log(i.countPrice)
                 Total += i.countPrice
             }
             dispatch({
@@ -82,12 +79,10 @@ export function cartsMinusActions(payload) {
         console.log("delete item")
         return (dispatch, getState) => {
             const store = getState().CartReducers.carts
-            // const newList = store
 
             const newList = store.filter(itemCart => itemCart.id !== payload.id)
             let Total = 0
             for (let i of newList) {
-                // console.log(i.countPrice)
                 Total += i.countPrice
             }
             dispatch({
@@ -107,7 +102,6 @@ export function cartsDeleteActions(payload) {
         const newList = store.filter(itemCart => itemCart.id !== payload.id)
         let Total = 0
         for (let i of newList) {
-            // console.log(i.countPrice)
             Total += i.countPrice
         }
         dispatch({
