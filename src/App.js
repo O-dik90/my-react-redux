@@ -8,6 +8,7 @@ import About from "./components/Page/About";
 import ContactUs from "./components/Page/ContactUs";
 import Products from "./components/Page/Products";
 import Cart from "./components/Page/Cart";
+import Footer from "./components/Footer/Index"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/cart" element={<Cart/>}/>
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

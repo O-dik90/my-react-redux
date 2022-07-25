@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { cartsActions } from '../../redux/actions/cartActions';
 import productsActions from '../../redux/actions/productActions';
 
-const Card = () => {
+function Card(){
   const products = useSelector((state) => state.ProductsReducers)
   const dispatch = useDispatch()
 
@@ -80,17 +80,17 @@ export function Modal(props) {
   return (
     <div>
       <div className="modal show fade" style={modelStyle}>
-        <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="staticBackdropLabel">{props.item.nama}</h5>
+              <h5 className="modal-title" id="staticBackdropLabel">{props.item.kategori}</h5>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={props.hide}>
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div className="modal-body">
               <img src={props.item.gambar} className="card-img-top" alt={props.item.nama} />
-              <p className="m-0 ">{props.item.kategori}</p>
+              <p className="m-0 ">{props.item.nama}</p>
               <p className="m-0 ">{props.item.warna}</p>
               <p className="m-0 font-weight-bold">Rp. {props.item.harga}</p>
             </div>

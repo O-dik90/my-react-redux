@@ -14,7 +14,6 @@ function Cart(){
   const handleMinusCart = (item) => {
     dispatch(cartsMinusActions(item))
   }
-
   const handleDeleteCart = (item) => {
     // console.log("del", item)
     dispatch(cartsDeleteActions(item))
