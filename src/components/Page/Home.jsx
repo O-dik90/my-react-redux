@@ -38,6 +38,9 @@ function Home() {
           <span className="sr-only">Next</span>
         </button>
       </div>
+      <hr />
+      <h5 className="font-weight-bold">Kategori Product</h5>
+      <hr />
       <div className="my-2">
         <div className="row justify-content-center">
           <div className="d-flex justify-content-around flex-wrap m-1">
@@ -74,7 +77,7 @@ function Home() {
           </div>
         </div>
       </div>
-      
+      Pagination product
     </div>
   )
 }

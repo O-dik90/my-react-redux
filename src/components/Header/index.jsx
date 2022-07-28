@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 export default function Header() {
     return (
         <div className="raw justify-content-center">
-            <nav className="navbar sticky-top">
-                <ul className="nav justify-content-center">
+            <nav className="navbar">
+                <ul className="nav justify-content-center ">
                     <li className="nav-item">
                         <Link className="nav-link active" to="/">Home</Link>
                     </li>

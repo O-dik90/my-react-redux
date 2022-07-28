@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartsDeleteActions, cartsMinusActions, cartsPlusActions } from '../../redux/actions/cartActions'
 
-function Cart(){
+function Cart() {
   const items = useSelector(state => state.CartReducers)
   const dispatch = useDispatch()
   // console.log(items);
@@ -18,27 +18,27 @@ function Cart(){
     // console.log("del", item)
     dispatch(cartsDeleteActions(item))
   }
-  // const handleQuantityCart = () => {
-  //   console.log("change quantity")
-  // }
 
   return (
     <div className="container mt-2">
       {
         items.cartsNumb === 0 ?
           <>
-            <p className="font-weight-bolder">Carts Still Empty!!!</p>
+            <p className="font-weight-bolder" style={{ margin: "10% 0%" }}>Carts Still Empty!!!</p>
           </>
           :
           <div className="row justify-content-around">
             <div className="col-sm-6 col-lg-6 p-0 mb-5">
               <div className="">
+                <h5 className="font-weight-bold m-0 pt-5">My Cart</h5>
+                <hr className="mt-0"/>
                 {
                   // console.log(items.carts)
                   items.carts.map((product) => {
                     // console.log(product)
                     return (
                       <div className="col" key={product.id}>
+
                         <div className="m-1 font-weight-bold">{product.nama}</div>
                         <div className="row justify-content-between mx-1">
                           <div className="col p-0">
@@ -51,7 +51,7 @@ function Cart(){
                                 <div className="input-group-prepend">
                                   <span className="input-group-text" id="inputGroup-sizing-sm">Jumlah :</span>
                                 </div>
-                                <input type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readOnly value={product.countItem}/>
+                                <input type="text" className="form-control p-0 text-center" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readOnly value={product.countItem} />
                               </div>
                               <p className="text-left m-0">Subtotal:</p>
                               <p className="m-0 font-weight-bold">Rp.{product.countPrice}</p>
@@ -71,8 +71,8 @@ function Cart(){
               </div>
             </div>
             <div className="col-sm col-lg-5">
-              <h5 className="text-left font-weight-bold">Carts Totals</h5>
-              <hr />
+              <h5 className="font-weight-bold m-0 pt-5">Carts Totals</h5>
+              <hr className="mt-0"/>
               <div className="row justify-content-lg-between">
                 <div className="col text-left">sub total</div>
                 <div className="col text-right">Rp. {items.cartsPrice}</div>

@@ -38,7 +38,7 @@ function Card(){
               products.Products.map((item, index) => {
                 return (
                   <div className="p-1 my-2" key={index}>
-                    <div className="card mx-auto" style={{ width: "148px" }}>
+                    <div className="card mx-auto" style={{ width: "140px" }}>
                       <img src={item.gambar} className="card-img-top " alt={item.nama} />
                       <div className="card-body p-1">
                         <p className="m-0 ">{item.nama}</p>

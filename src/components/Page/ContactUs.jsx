@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ContactUs(){
+function ContactUs() {
   return (
-    <div>
-      contact us
+    <div className="mt-3">
+      <h3 className="font-weight-bolder">Contact Us</h3>
     </div>
   )
 }
